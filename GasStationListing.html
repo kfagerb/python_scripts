@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
+    <script>
+    var code_show=true; //true -> hide code at first
+
+    function code_toggle() {
+        $('div.prompt').hide(); // always hide prompt
+
+        if (code_show){
+            $('div.input').hide();
+        } else {
+            $('div.input').show();
+        }
+        code_show = !code_show
+    }
+    $( document ).ready(code_toggle);
+</script>
 <title>Gas Station Listing</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
